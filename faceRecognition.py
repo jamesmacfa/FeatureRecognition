@@ -3,7 +3,7 @@ import numpy as py
 from matplotlib import pyplot as plt 
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-cap = cv2.VideoCapture("EXAMPLE")
+cap = cv2.VideoCapture("enter_image_location")
 
 while True:
     ret, img = cap.read()
