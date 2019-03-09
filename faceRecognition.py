@@ -13,7 +13,7 @@ path = []
 #This loop applies a grayscale filter to the video feed, 
 #and applies the haar cascade to the resulting output.
 #It then draws a rectangle around the forehead of the face,
-#and appends the coordinates of that rectangle to the path array.
+#and appends the coordinates of that rectangle to the path array
 while True:
     ret, img = cap.read()
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
