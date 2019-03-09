@@ -3,7 +3,9 @@ import numpy as py
 from matplotlib import pyplot as plt 
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-cap = cv2.VideoCapture("enter_image_location")
+cap = cv2.VideoCapture("resources/video/mari.mp4")
+
+path = []
 
 while True:
     ret, img = cap.read()
@@ -11,13 +13,14 @@ while True:
     faces = face_cascade.detectMultiScale(gray, 1.3, 9)
     for (x,y,w,h) in faces:
         cv2.rectangle(img, (x,y), (x+w, int(y+h/3)), (255,0,0), 2)
+        path.append((x,y))
        
 
     cv2.imshow('img',img)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
         break
-
+print (path)
 cap.release()
-cap.destroyAllWindows()
+cv2.destroyAllWindows()
 
