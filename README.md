@@ -1,0 +1,1 @@
+Python code designed to detect foreheads in a given video input file. To run, modify the path for the "cap" variable on line 8 with the directory of the desired input file.
